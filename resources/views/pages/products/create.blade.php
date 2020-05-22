@@ -4,6 +4,7 @@
 
 @section('content')
 
+<div class="content">
 <div class="card">
     <div class="card-header">
         <strong>Add Product</strong>
@@ -60,6 +61,7 @@
             <a class="btn btn-outline-danger btn-block" href="{{ route('product.index') }}">Cancel</a>
         </form>
     </div>
+</div>
 </div>
 
 @endsection
