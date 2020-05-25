@@ -24,8 +24,8 @@
                     <tbody>
                         @forelse ($items as $item)
                         <tr>
+                            <td>{{ $loop->iteration }}</td>
                             <td class="name">{{ $item->product->name }}</td>
-                            <td>{{ $item->name }}</td>
                             <td>  <img class="type" src="{{ $item->photo }}" alt=""> </td>
                             <td> <span class="price">{{ $item->is_default ? 'Yes' : 'No' }}</span> </td>
                             <td>

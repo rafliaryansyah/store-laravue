@@ -26,7 +26,9 @@ class ProductGalleryController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+
+        return view('pages.product-galleries.create', compact('products'));
     }
 
     /**
@@ -37,7 +39,15 @@ class ProductGalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Mengambil Form Request dari Request
+        $data = $request->all();
+
+        // Mendapatkan Slug dari Name Product
+        $data['photo'] = $request->file('photo')->store(
+            'assets/product', 'public');
+
+        ProductGallery::create($data);
+        return redirect()->route('product-galleries.index');
     }
 
     /**
