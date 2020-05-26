@@ -10,8 +10,9 @@
             <div class="card-header">
                 <strong class="card-title">Income Transaction Data</strong>
             </div>
+            <div class="card-body">
             <div class="table-stats order-table ov-h">
-                <table class="table ">
+                <table class="table">
                     <thead>
                         <tr>
                             <th class="serial">#</th>
@@ -83,6 +84,7 @@
                     </tbody>
                 </table>
             </div> <!-- /.table-stats -->
+            </div>
         </div>
     </div>
     </div>
