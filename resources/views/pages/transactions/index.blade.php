@@ -55,7 +55,7 @@
                                 @endif
                                 <a href="#mymodal"
                                    class="btn btn-primary btn-sm"
-                                   {{-- data-remote="{{ route('transaciton.show', $item->id) }}" --}}
+                                   data-remote="{{ route('transaction.show', $item->id) }}"
                                    data-toggle="modal"
                                    data-target="#mymodal"
                                    data-title="Detail Transaction {{ $item->uuid }}">
