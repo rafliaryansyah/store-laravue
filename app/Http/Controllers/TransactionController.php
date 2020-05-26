@@ -91,20 +91,29 @@ class TransactionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Transaction::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('transaction.index');
     }
 
     public function setStatus(Request $request, $id)
     {
+
+        // Untuk memvalidasi data yang ingin diubah
         $request->validate([
             'status' => 'required|in:PENDING,SUCCESS, FAILED'
         ]);
 
+        // Mencari data berdasarkan id yang ingin diubah
         $item = Transaction::findOrFail($id);
+        // Mengubah data berdasarkan request
         $item->transaction_status = $request->status;
 
+        // Menyimpan data yang diubah
         $item->save();
 
+        // Mengembalikan halaman index
         return redirect()->route('transaction.index');
 
     }
