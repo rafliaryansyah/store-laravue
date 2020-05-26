@@ -45,14 +45,14 @@
                                 </span>
                             </td>
                             <td>
-                                @if ($item->transaction_status == 'PENDING')
+                                {{-- @if ($item->transaction_status == 'PENDING') --}}
                                     {{-- <a href="{{ route('transaction.status', $item->id) }}?status=SUCCESS" class="btn btn-success btn-sm">
                                         <i class="fa fa-check"></i>
                                     </a>
                                     <a href="{{ route('transaction.status', $item->id) }}?status=FAILED" class="btn btn-warning btn-sm">
                                         <i class="fa fa-times"></i>
                                     </a> --}}
-                                @endif
+                                {{-- @endif --}}
                                 <a href="#mymodal"
                                    class="btn btn-primary btn-sm"
                                    data-remote="{{ route('transaction.show', $item->id) }}"
@@ -61,7 +61,7 @@
                                    data-title="Detail Transaction {{ $item->uuid }}">
                                     <i class="fa fa-eye"></i>
                                 </a>
-                                <a href="{{ route('transaction.destroy', $item->id) }}" class="btn btn-primary btn-sm">
+                                <a href="{{ route('transaction.edit', $item->id) }}" class="btn btn-primary btn-sm">
                                     <i class="fa fa-pencil"></i>
                                 </a>
                                 <form action="{{ route('transaction.destroy', $item->id) }}" method="post" class="d-inline">
