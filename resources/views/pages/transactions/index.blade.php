@@ -45,14 +45,14 @@
                                 </span>
                             </td>
                             <td>
-                                {{-- @if ($item->transaction_status == 'PENDING') --}}
-                                    {{-- <a href="{{ route('transaction.status', $item->id) }}?status=SUCCESS" class="btn btn-success btn-sm">
+                                @if ($item->transaction_status == 'PENDING')
+                                    <a href="{{ route('transaction.status', $item->id) }}?status=SUCCESS" class="btn btn-success btn-sm">
                                         <i class="fa fa-check"></i>
                                     </a>
                                     <a href="{{ route('transaction.status', $item->id) }}?status=FAILED" class="btn btn-warning btn-sm">
                                         <i class="fa fa-times"></i>
-                                    </a> --}}
-                                {{-- @endif --}}
+                                    </a>
+                                @endif 
                                 <a href="#mymodal"
                                    class="btn btn-primary btn-sm"
                                    data-remote="{{ route('transaction.show', $item->id) }}"
