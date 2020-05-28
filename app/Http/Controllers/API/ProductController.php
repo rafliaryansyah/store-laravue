@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\API;
 
-use app\Http\Controllers\API\ResponseFormatter;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
